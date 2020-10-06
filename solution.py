@@ -36,16 +36,16 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send RCPT TO command and print server response.
     # Fill in start
-    receiptTo = "RCPT TO:<XXX>\r\n"
-    clientSocket.send(receiptTo.encode())
+    rcptTo = "RCPT TO:<XXX>\r\n"
+    clientSocket.send(rcptTo.encode())
     rec3 = clientSocket.recv(1024).decode()
     #print("After RCPT TO command: " + rec3)
     # Fill in end
 
     # Send DATA command and print server response.
     # Fill in start
-    dataToSend = "DATA\r\n"
-    clientSocket.send(dataToSend.encode())
+    data = "DATA\r\n"
+    clientSocket.send(data.encode())
     rec4 = clientSocket.recv(1024).decode()
     #print("After DATA command: " + rec4)
     # Fill in end
