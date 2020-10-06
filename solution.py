@@ -28,10 +28,6 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send MAIL FROM command and print server response.
     # Fill in start
-    #username = "thomas.sarahkate@gmail.com"
-    #password = "sbuN987006"
-    #basestring_1 = ("\x00" + username + "\00" + password).encode()
-
     mailFrom = "MAIL FROM:<XXX>\r\n"
     clientSocket.send(mailFrom.encode())
     rec2 = clientSocket.recv(1024).decode()
